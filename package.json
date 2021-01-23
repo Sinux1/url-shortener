@@ -1,0 +1,21 @@
+{
+  "name": "url-shortener",
+  "version": "1.0.0",
+  "description": "A URL shortener to be deployed on AWS   I am following a tutorial by a great youtube creator.     [text](https://youtu.be/SLpUKAGnm-g)   This is another quick project as I try to learn front and back end with node, javascript, and mongodb!",
+  "main": "index.js",
+  "scripts": {
+    "devStart": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "shortid": "^2.2.16"
+  },
+  "devDependencies": {
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "mogoose": "0.0.1-security",
+    "mongoose": "^5.11.13",
+    "nodemon": "^2.0.7"
+  }
+}
