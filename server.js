@@ -43,6 +43,16 @@ app.post('/shortUrls', async (req, res) => {
 // take any information that comes after the slash and 
 // place it in a variable called shortUrl
 app.get('/:shortUrl', async (req, res) => {
+  // Return db object with short column equal to the shortUrl value from the url
+  const shortUrl = await ShortUrl.findOne({ short: req.params.shortUrl}) 
+  // If it doesn't exist send 404
+  if(shortUrl == null) return res.sendStatus(404)
+  // If it does exist increment it's clicks
+  shortUrl.clicks++
+  // To update shortUrl model
+  shortUrl.save()
+  // This is the redirection 
+  res.redirect(shortUrl.full)
 
 })
 
